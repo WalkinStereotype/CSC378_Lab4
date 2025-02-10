@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 61626f9eeaa36d14b845784df2f47c25
+  productGUID: b344753d1e2e3d745ab2280d5f15fca5
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 378Lab4
+  productName: test2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -609,14 +609,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: 378Lab4
+  metroPackageName: test2
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: 378Lab4
+  metroApplicationDescription: test2
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -687,10 +687,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 0d95f15a-a7aa-4416-987c-944ff3619a07
+  cloudProjectId: c5ac69ed-912a-4e74-aab1-47a7759bdfb3
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 378Lab4 2025-02-07_17-28-35
+  projectName: test2
   organizationId: headrec
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
