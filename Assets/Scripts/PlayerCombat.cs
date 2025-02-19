@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Timeline;
 
@@ -11,12 +12,19 @@ public class PlayerCombat : MonoBehaviour
 
     public float attackRange = 0.5f;
     public int attackDamage = 10;
+    public float endlag = 1f;
+
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift)){
-            Attack();
+            animator.SetBool("Attack", true);
+            Invoke("delay", endlag);
+        }
+        else{
+            animator.SetBool("Attack", false);
         }
     }
 
@@ -26,6 +34,8 @@ public class PlayerCombat : MonoBehaviour
         //animator.SetTrigger("Attack");
 
         //detect enemies in range
+        Debug.Log("Attack recieved");
+
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
         //damage the enemies
@@ -41,5 +51,9 @@ public class PlayerCombat : MonoBehaviour
 
         if(attackPoint == null){return;}
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    private void delay(){
+        Attack();
     }
 }
