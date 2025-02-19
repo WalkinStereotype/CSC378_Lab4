@@ -1746,6 +1746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  player: {fileID: 1151263905}
 --- !u!95 &1029624113
 Animator:
   serializedVersion: 7
