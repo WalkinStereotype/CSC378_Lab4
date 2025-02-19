@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpSpeed;
     public bool isGrounded = false;
+
+    public Animator animator;
 
     void Start()
     {
@@ -22,11 +25,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && isGrounded){
             currentVerticalVelocity = jumpSpeed;
             isGrounded = false;
+            animator.SetBool("Jump", true);
             // sr.color = Color.red;
         }
         
         Vector2 newVelocity = new Vector2(horizontalInput * moveSpeed, currentVerticalVelocity);
         myRigidbody.linearVelocity = newVelocity;
+
+        animator.SetFloat("Run", Mathf.Abs(horizontalInput));
+        sr.flipX = horizontalInput < 0f;
+        animator.SetFloat("Vertical", currentVerticalVelocity);
+        
 
     }
 
@@ -34,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")){
             isGrounded = true;
+            animator.SetBool("Jump", false);
             // sr.color = Color.green;
         }
     }

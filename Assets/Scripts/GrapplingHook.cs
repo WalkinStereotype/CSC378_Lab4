@@ -8,6 +8,7 @@ public class GrapplingHook : MonoBehaviour
 
     private Vector3 grapplePoint;
     private DistanceJoint2D joint;
+    public Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,12 +40,14 @@ public class GrapplingHook : MonoBehaviour
                 rope.SetPosition(0, grapplePoint);
                 rope.SetPosition(1, transform.position);
                 rope.enabled = true;
+                animator.SetBool("Grapple", true);
             }
         }
 
         if(Input.GetMouseButtonUp(0)){
             joint.enabled = false;
             rope.enabled = false;
+            animator.SetBool("Grapple", false);
         }
 
         if(rope.enabled){
