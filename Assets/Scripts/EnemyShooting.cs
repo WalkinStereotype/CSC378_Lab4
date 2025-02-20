@@ -24,13 +24,13 @@ public class EnemyShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-
+        if(enemyFOV.canSeePlayer){
+            timer += Time.deltaTime;
+        }
+        
         if (timer > bulletCooldown){
             timer = 0;
-            if (enemyFOV.canSeePlayer){
-                shoot();
-            }
+            shoot();
         }
     }
 
