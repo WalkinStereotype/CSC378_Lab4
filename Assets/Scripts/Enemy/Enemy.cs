@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -17,6 +19,7 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         enemyFOV = GetComponent<EnemyFOV>();
         currentHealth = maxHealth;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
