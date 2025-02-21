@@ -21,9 +21,9 @@ public class PlayerHealth : MonoBehaviour
     {
         health = Mathf.Clamp(health - dmg, 0, maxHealth);
 
-        if (health > 0)
+        if (health < 1)
         {
-
+            GameManager.instance.ShowGameOverScreen(false);
         }
         else 
         {

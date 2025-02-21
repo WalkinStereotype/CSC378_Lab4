@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Goal
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Grapple
   - Enemy
   - Player
-  - 
+  - Goal
   - 
   - 
   - 
