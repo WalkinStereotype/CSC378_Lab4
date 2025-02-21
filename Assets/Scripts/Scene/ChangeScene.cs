@@ -9,6 +9,11 @@ public class ChangeScene : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void PlayCutscene()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     public void ShowMainMenu()
     {
         SceneManager.LoadScene(0);
