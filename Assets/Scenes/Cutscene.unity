@@ -646,7 +646,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838386169}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 912bcb9f44be9894f8bf1cd08a81b7fe, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 626767526}
@@ -668,7 +668,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 0
@@ -687,6 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 838386171}
+  videoURL: https://drive.google.com/file/d/1htV4wbldgOfwOLePHAkh5a8KlLMudtu5/view?usp=sharing
   nextSceneName: SampleScene
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
