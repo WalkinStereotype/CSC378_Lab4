@@ -9,10 +9,10 @@ public class ChangeScene : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void PlayCutscene()
-    {
-        SceneManager.LoadScene(2);
-    }
+    // public void PlayCutscene()
+    // {
+    //     SceneManager.LoadScene(2);
+    // }
 
     public void ShowMainMenu()
     {
