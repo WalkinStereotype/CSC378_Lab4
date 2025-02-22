@@ -9,6 +9,7 @@ public class GrapplingHook : MonoBehaviour
     private Vector3 grapplePoint;
     private DistanceJoint2D joint;
     public Animator animator;
+    public AudioSource grapple;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +32,7 @@ public class GrapplingHook : MonoBehaviour
 
 
             if(hit.collider != null){
+                grapple.Play();
                 grapplePoint = hit.point;
                 grapplePoint.z = 0;
 

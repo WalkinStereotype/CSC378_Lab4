@@ -15,6 +15,8 @@ public class PlayerCombat : MonoBehaviour
     public float endlag = 1f;
 
     public Animator animator;
+    public AudioSource sword;
+    public float sound_delay = 0.5f;
 
     // Update is called once per frame
     void Update()
@@ -32,8 +34,9 @@ public class PlayerCombat : MonoBehaviour
     {
         //play attack animation
         //animator.SetTrigger("Attack");
-
         //detect enemies in range
+        sword.Play();
+
         Debug.Log("Attack recieved");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
@@ -56,4 +59,5 @@ public class PlayerCombat : MonoBehaviour
     private void delay(){
         Attack();
     }
+
 }
